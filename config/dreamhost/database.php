@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('db-laravel.bowtiesoft.com', 'localhost'),
+            'host' => env('db-laravel.bowtiesoft.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('regisridge', 'forge'),
-            'username' => env('bowtiesoft', 'forge'),
-            'password' => env('Drexler22', ''),
+            'database' => env('regisridge'),
+            'username' => env('bowtiesoft'),
+            'password' => env('Drexler22'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
