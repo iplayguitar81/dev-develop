@@ -51,15 +51,14 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
         ],
-        
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('db-laravel.bowtiesoft.com'),
+            'host' => env('db-laravel.bowtiesoft.com', 'localhost'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('regisridge'),
-            'username' => env('bowtiesoft'),
-            'password' => env('Drexler22'),
+            'database' => env('regisridge', 'forge'),
+            'username' => env('bowtiesoft', 'forge'),
+            'password' => env('Drexler22', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
