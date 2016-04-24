@@ -7,6 +7,7 @@
 
 @section('footer')
 
+
   <script>
 
       alert('test this js')
