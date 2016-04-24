@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d50dd1cb-ee57-4b3a-b1ea-44820a64b3e1" name="laravel.bowtiesoft.com" url="http://laravel.bowtiesoft.com">
+        <fileTransfer host="laravel.bowtiesoft.com" port="21" rootFolder="/laravel.bowtiesoft.com" username="bowtiesoft">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
