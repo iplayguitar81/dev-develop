@@ -9,7 +9,7 @@
 
   <script>
 
-      alert('fuck this')
+      alert('test this js')
   </script>
 
     @stop
