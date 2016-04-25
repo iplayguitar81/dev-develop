@@ -5,10 +5,9 @@
 <h1>All Cards</h1>
 
     @foreach ($cards as $card)
-    {{$card->title}}
-    {{$card->created_at}}
+    <p>{{$card->title}}</p>
 
-
+    <p>{{$card->created_at}}</p>
 
     @endforeach
 
