@@ -5,7 +5,7 @@
 <h1>All Cards</h1>
 
     @foreach ($cards as $card)
-    <p>{{$card->title}}</p>
+    <p><a href="/cards/{{$card->id}}">{{$card->title}}</a></p>
 
     <p>{{$card->created_at}}</p>
 
