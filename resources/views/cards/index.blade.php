@@ -6,6 +6,8 @@
 
     @foreach ($cards as $card)
     {{$card->title}}
+    {{$card->created_at}}
+
 
 
     @endforeach
