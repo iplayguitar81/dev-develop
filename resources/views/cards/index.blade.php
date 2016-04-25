@@ -6,7 +6,7 @@
 
     @foreach ($cards as $card)
     {{$card->title}}
-        {{$card->date}}
+
 
     @endforeach
 
