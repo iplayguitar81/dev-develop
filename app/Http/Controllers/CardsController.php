@@ -17,7 +17,8 @@ class CardsController extends Controller
 //            ->table('cards')
 //            ->get();
 //
-        //ELOQUIN
+        //ELOQUENT STYLIN'
+        
         $cards =Card::all();
        return view('cards.index',compact('cards'));
 
@@ -27,7 +28,7 @@ class CardsController extends Controller
     
     public function show(Card $card){
 
-        //ELOQUIN???
+        //ELOQUENT STYLE BY CREATING THE MODEL OF CARD IT FIGURES IT OUT
 
      //   $card = Card::find($id);
 
