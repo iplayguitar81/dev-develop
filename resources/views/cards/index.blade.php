@@ -4,4 +4,10 @@
 
 <h1>All Cards</h1>
 
+    @foreach ($cards as $card)
+    {{$card->title}}
+        {{$card->date}}
+
+    @endforeach
+
  @stop
