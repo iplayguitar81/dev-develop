@@ -21,13 +21,13 @@
                         <a href="{{ url('posts/' . $item->id . '/edit') }}">
                             <button type="submit" class="btn btn-primary btn-xs">Update</button>
                         </a> /
-                        {{--{!! Form::open([--}}
-                            {{--'method'=>'DELETE',--}}
-                            {{--'url' => ['posts', $item->id],--}}
-                            {{--'style' => 'display:inline'--}}
-                        {{--]) !!}--}}
-                            {{--{!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}--}}
-                        {{--{!! Form::close() !!}--}}
+                        {!! Form::open([
+                            'method'=>'DELETE',
+                            'url' => ['posts', $item->id],
+                            'style' => 'display:inline'
+                        ]) !!}
+                            {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
+                        {!! Form::close() !!}
                     </td>
                 </tr>
             @endforeach
