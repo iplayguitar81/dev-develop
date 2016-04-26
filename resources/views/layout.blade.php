@@ -23,19 +23,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img src="/images/bowtiebranded.png" alt="bowtiesoftware.com" /></a>
+            <a class="navbar-brand" href="{{URL::to('/')}}"><img src="/images/bowtiebranded.png" alt="bowtiesoftware.com" /></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="about">About</a>
+                    <a href="{{URL::to('/about')}}">About</a>
                 </li>
                 <li>
-                    <a href="cards">Cards</a>
+                    <a href="{{URL::to('/cards')}}">Cards</a>
                 </li>
                 <li>
-                    <a href="contact">Contact</a>
+                    <a href="{{URL::to('/contact')}}">Contact</a>
                 </li>
             </ul>
         </div>
