@@ -155,8 +155,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        //Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
-        //Collective\Html\HtmlServiceProvider::class,
+        Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
