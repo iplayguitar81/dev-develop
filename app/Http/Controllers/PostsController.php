@@ -9,6 +9,15 @@ use App\Post;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
+use Validator;
+use Flash;
+//use Illuminate\Support\Facades\Input;
+//use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\MessageBag;
+//use ViewErrorBag;
+use Redirect;
+
+
 
 class PostsController extends Controller
 {
@@ -42,13 +51,21 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        
-        Post::create($request->all());
 
+
+
+$this->validate($request,[
+    'title' => 'required'
+]);
+
+
+        Post::create($request->all());
         Session::flash('flash_message', 'Post added!');
 
         return redirect('posts');
-    }
+//        }
+
+}
 
     /**
      * Display the specified resource.
