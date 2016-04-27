@@ -72,10 +72,9 @@
         </div>
         <!-- /.row -->
     </footer>
-
 </div>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script  src="{{URL::to(asset('/js/jquery.js'))}}"></script>
+<script src="{{URL::to(asset('/js/bootstrap.min.js'))}}"></script>
 </body>
 
         </html>
