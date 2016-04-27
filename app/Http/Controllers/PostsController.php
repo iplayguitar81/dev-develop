@@ -11,10 +11,8 @@ use Carbon\Carbon;
 use Session;
 use Validator;
 use Flash;
-//use Illuminate\Support\Facades\Input;
-//use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\MessageBag;
-//use ViewErrorBag;
+
+
 use Redirect;
 
 
@@ -55,7 +53,9 @@ class PostsController extends Controller
 
 
 $this->validate($request,[
-    'title' => 'required'
+    'title' => 'required',
+    'body' => 'required',
+
 ]);
 
 
