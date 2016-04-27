@@ -14,26 +14,28 @@
 
 
 
-//create custom route...
-Route::get('about',function() {
-    return view('pages.about');
-
-});
-
-//set up the routes with their corresponding controller... very similar to rails
-Route::get('/', 'PagesController@home');
-
-
-Route::get('about', 'PagesController@about');
-
-Route::get('contact', 'PagesController@contact');
-
-Route::get('cards', 'CardsController@index');
-
-Route::get('cards/{card}', 'CardsController@show');
 
 
 
 Route::group(['middleware' => ['web']], function () {
 	Route::resource('posts', 'PostsController');
+
+
+//create custom route...
+    Route::get('about',function() {
+        return view('pages.about');
+
+    });
+
+//set up the routes with their corresponding controller... very similar to rails
+    Route::get('/', 'PagesController@home');
+
+
+    Route::get('about', 'PagesController@about');
+
+    Route::get('contact', 'PagesController@contact');
+
+    Route::get('cards', 'CardsController@index');
+
+    Route::get('cards/{card}', 'CardsController@show');
 });
