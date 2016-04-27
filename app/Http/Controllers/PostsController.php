@@ -106,6 +106,11 @@ $this->validate($request,[
     {
         
         $post = Post::findOrFail($id);
+        $this->validate($request,[
+            'title' => 'required',
+            'body' => 'required',
+
+        ]);
         $post->update($request->all());
 
         Session::flash('flash_message', 'Post updated!');
