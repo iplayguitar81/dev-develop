@@ -16,6 +16,8 @@ return [
     |
     */
 
+    //switch this to smtp when i get google account set up for this...
+
     'driver' => env('MAIL_DRIVER', 'log'),
 
     /*
