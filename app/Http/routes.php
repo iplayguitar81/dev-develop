@@ -38,7 +38,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('cards', 'CardsController@index');
 
     Route::get('cards/{card}', 'CardsController@show');
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
 });
-Route::auth();
 
-Route::get('/home', 'HomeController@index');
+
+
