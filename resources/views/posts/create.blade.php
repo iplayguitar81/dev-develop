@@ -5,7 +5,13 @@
     <h1>Create New Post</h1>
     <hr/>
 
-
+    @if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
 
 
     {!! Form::open(['url' => 'posts', 'class' => 'form-horizontal']) !!}
@@ -39,12 +45,6 @@
 
 
 
-    @if ($errors->any())
-        <ul class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    @endif
+
 
 @endsection
