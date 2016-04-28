@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Gate;
 
 use App\Post;
 use Illuminate\Http\Request;
@@ -28,9 +28,12 @@ class PostsController extends Controller
      */
     public function index()
     {
+        
         $posts = Post::paginate(15);
 
         return view('posts.index', compact('posts'));
+        $this->authorize('crud-post');
+
     }
 
     /**
