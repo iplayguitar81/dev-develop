@@ -2,9 +2,9 @@
 
 @section('content')
 
+    @can('isAdmin')
     <h1>Edit Post</h1>
     <hr/>
-
     @if ($errors->any())
         <ul class="alert alert-danger">
             @foreach ($errors->all() as $error)
@@ -34,7 +34,6 @@
                 </div>
             </div>
 
-
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
             {!! Form::submit('Update', ['class' => 'btn btn-primary form-control']) !!}
@@ -42,6 +41,13 @@
     </div>
     {!! Form::close() !!}
 
+    @else
+       <?php
+       header("Location: /");
+        die();
+       ?>
+
+@endcan
 
 
 @endsection
