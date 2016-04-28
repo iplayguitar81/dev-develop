@@ -5,6 +5,14 @@
     <h1>Edit Post</h1>
     <hr/>
 
+    @if ($errors->any())
+        <ul class="alert alert-danger">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+
     {!! Form::model($post, [
         'method' => 'PATCH',
         'url' => ['posts', $post->id],
@@ -34,12 +42,6 @@
     </div>
     {!! Form::close() !!}
 
-    @if ($errors->any())
-        <ul class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    @endif
+
 
 @endsection
