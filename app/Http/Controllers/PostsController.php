@@ -100,6 +100,7 @@ $this->validate($request,[
         $post = Post::findOrFail($id);
 
         return view('posts.edit', compact('post'));
+        $this->authorize('isAdmin');
     }
 
     /**
