@@ -32,7 +32,7 @@ class PostsController extends Controller
         $posts = Post::paginate(15);
 
         return view('posts.index', compact('posts'));
-        $this->authorize('crud-post');
+        $this->authorize('isAdmin');
 
     }
 
