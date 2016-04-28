@@ -106,6 +106,9 @@ $this->validate($request,[
     {
         
         $post = Post::findOrFail($id);
+
+        //add this to before the update or when it creates as above
+
         $this->validate($request,[
             'title' => 'required',
             'body' => 'required',
