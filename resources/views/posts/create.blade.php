@@ -13,7 +13,7 @@
         </ul>
     @endif
 
-
+@can('isAdmin')
     {!! Form::open(['url' => 'posts', 'class' => 'form-horizontal']) !!}
 
 
@@ -43,8 +43,12 @@
     </div>
     {!! Form::close() !!}
 
-
-
+@endcan
+    @else
+        <?php
+        header("Location: /");
+        die();
+        ?>
 
 
 @endsection
