@@ -32,6 +32,9 @@ class PostsController extends Controller
         $posts = Post::paginate(15);
 
         return view('posts.index', compact('posts'));
+
+        //use this whenever I want to display stuff like links for crud functionality
+
         $this->authorize('isAdmin');
 
     }
