@@ -34,13 +34,16 @@
                 <li>
                     <a href="{{URL::to('/cards')}}">Cards</a>
                 </li>
-                <li>
-                    <a href="{{URL::to('/contact')}}">Contact</a>
-                </li>
 
                 <li>
                     <a href="{{URL::to('/posts')}}">Posts</a>
                 </li>
+
+                <li>
+                    <a href="{{URL::to('/contact')}}">Contact</a>
+                </li>
+
+
             </ul>
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
