@@ -2,12 +2,16 @@
 
 @section('content')
 
-    <h1>Posts <a href="{{ url('posts/create') }}" class="btn btn-primary pull-right btn-sm">Add New Post</a></h1>
+    <h1>Posts @can('isAdmin')<a href="{{ url('posts/create') }}" class="btn btn-primary pull-right btn-sm">Add New Post</a>@endcan</h1>
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th><th>Title</th><th>Body</th><th>Actions</th>
+                    <th>S.No</th><th>Title</th><th>Body</th>
+                    @can('isAdmin')
+                    <th>Actions</th>
+                    @endcan
+
                 </tr>
             </thead>
             <tbody>
@@ -17,6 +21,8 @@
                 <tr>
                     <td>{{ $x }}</td>
                     <td><a href="{{ url('posts', $item->id) }}">{{ $item->title }}</a></td><td>{{ $item->body }}</td>
+
+                    @can('isAdmin')
                     <td>
                         <a href="{{ url('posts/' . $item->id . '/edit') }}">
                             <button type="submit" class="btn btn-primary btn-xs">Update</button>
@@ -29,6 +35,9 @@
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-xs']) !!}
                         {!! Form::close() !!}
                     </td>
+
+@endcan
+
                 </tr>
             @endforeach
             </tbody>
