@@ -43,12 +43,13 @@
     </div>
     {!! Form::close() !!}
 
-@endcan
     @else
         <?php
         header("Location: /");
         die();
         ?>
+@endcan
+
 
 
 @endsection
