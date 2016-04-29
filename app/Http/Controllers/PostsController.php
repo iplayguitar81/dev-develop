@@ -139,6 +139,17 @@ $this->validate($request,[
             'body' => 'required',
 
         ]);
+
+        if(Input::hasFile('file')){
+
+            echo 'Uploaded<br/>';
+            $file = Input::file('file');
+            $file->move('images', $file->getClientOriginalName());
+            echo'<img src"images/'.$file->getClientOriginalName() .'"/>';
+
+
+        }
+
         $post->update($request->all());
 
         Session::flash('flash_message', 'Post updated!');
