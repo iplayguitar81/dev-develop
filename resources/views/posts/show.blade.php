@@ -12,7 +12,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ $post->id }}</td> <td> {{ $post->title }} </td><td> {{ $post->body }} </td><td><img class="img-thumbnail" src="../images/{{$post->img_string}}"></td>
+                    <td>{{ $post->id }}</td> <td> {{ $post->title }} </td><td> {{ $post->body }} </td>
+
+                    @if($post->img_string != "")
+                        <td><img class="img-thumbnail" src="../images/{{$post->img_string}}"></td>
+                    @else
+                        <td>No image for this post</td>
+
+                    @endif
                 </tr>
             </tbody>    
         </table>
