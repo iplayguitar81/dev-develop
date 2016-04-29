@@ -24,7 +24,7 @@
                     @if($item->img_string != "")
                     <td><img class="img-thumbnail" src="../images/{{$item->img_string}}"></td>
                     @else
-                        <td>&nbsp;&nbsp;</td>
+                        <td>No image for this post</td>
 
                     @endif
                         {{--<img src="{{route('image',['filename'=>])}}">--}}
