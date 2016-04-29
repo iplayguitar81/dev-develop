@@ -7,7 +7,7 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th><th>Title</th><th>Body</th><th>Img</th>
+                    <th>Title</th><th>Body</th><th>Img</th>
                     @can('isAdmin')
                     <th>Actions</th>
                     @endcan
@@ -19,7 +19,7 @@
             @foreach($posts as $item)
                 {{-- */$x++;/* --}}
                 <tr>
-                    <td>{{ $x }}</td>
+                    {{--<td>{{ $x }}</td>--}}
                     <td><a href="{{ url('posts', $item->id) }}">{{ $item->title }}</a></td><td>{{ $item->body }}</td>
                     @if($item->img_string != "")
                     <td><img class="img-thumbnail" src="../images/{{$item->img_string}}"></td>
