@@ -86,6 +86,12 @@
 
             });
         });
+
+
+        $(document).ready(function(){
+        $(".filename").hide();
+
+        });
     </script>
 
     @endsection
