@@ -14,7 +14,7 @@
     @endif
 
 @can('isAdmin')
-    {!! Form::open(['url' => 'posts', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => 'posts', 'class' => 'form-horizontal', 'files'=>true]) !!}
 
 
                 <div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
@@ -34,7 +34,12 @@
                     {!! $errors->first('body', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
-
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-3">
+        <input type="file" name="file" id="file" />
+            </div>
+        </div>
+        {{csrf_field()}}
 
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
