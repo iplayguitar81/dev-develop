@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-@if($post->img_string >0) {
+@if($post->img_string !="") {
 <img class="img-thumbnail" src="../images/{{$post->img_string}}">
 }
 @endif
