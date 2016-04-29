@@ -38,6 +38,7 @@
 @if($post->img_string >0) {
 <img class="img-thumbnail" src="../images/{{$post->img_string}}">
 }
+@endif
 
     {{csrf_field()}}
 
