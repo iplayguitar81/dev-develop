@@ -26,11 +26,7 @@
                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('title', '<p class="help-block">:message</p>') !!}
                 </div>
-                    {!! Form::label('img_string', 'Image String: ', ['class' => 'col-sm-3 control-label']) !!}
-                    <div class="col-sm-6">
-                        {!! Form::text('img_string', null, ['class' => 'form-control filename']) !!}
-                        {!! $errors->first('img_string', '<p class="help-block">:message</p>') !!}
-                    </div>
+
             </div>
             <div class="form-group {{ $errors->has('body') ? 'has-error' : ''}}">
                 {!! Form::label('body', 'Body: ', ['class' => 'col-sm-3 control-label']) !!}
@@ -45,6 +41,19 @@
             </div>
         </div>
         {{csrf_field()}}
+
+    <div class="form-group">
+
+        <div class="col-sm-offset-3 col-sm-3">
+
+            {!! Form::label('img_string', 'Image String: ', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::text('img_string', null, ['class' => 'form-control filename']) !!}
+                {!! $errors->first('img_string', '<p class="help-block">:message</p>') !!}
+            </div>
+        </div>
+
+    </div>
 
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
