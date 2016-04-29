@@ -35,9 +35,9 @@
                 </div>
             </div>
 
-@if($post->img_string !="") {
+@if($post->img_string !="")
 <img class="img-thumbnail" src="../../images/{{$post->img_string}}">
-}
+
 @endif
 
     {{csrf_field()}}
