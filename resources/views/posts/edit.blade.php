@@ -16,7 +16,8 @@
     {!! Form::model($post, [
         'method' => 'PATCH',
         'url' => ['posts', $post->id],
-        'class' => 'form-horizontal'
+        'class' => 'form-horizontal',
+        'files'=>true
     ]) !!}
 
                 <div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
@@ -34,6 +35,23 @@
                 </div>
             </div>
 
+
+    {{csrf_field()}}
+
+    <div class="form-group">
+
+        <div class="col-sm-offset-3 col-sm-3">
+
+            {!! Form::label('img_string', 'Image String: ', ['class' => 'col-sm-3 control-label img_string']) !!}
+
+            {!! Form::text('img_string', null, ['class' => 'form-control filename']) !!}
+            {!! $errors->first('img_string', '<p class="help-block">:message</p>') !!}
+
+        </div>
+
+    </div>
+
+
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
             {!! Form::submit('Update', ['class' => 'btn btn-primary form-control']) !!}
@@ -49,5 +67,32 @@
 
 @endcan
 
+
+@endsection
+
+@section('footer')
+    <script  src="{{URL::to(asset('/js/jquery.js'))}}"></script>
+    <script type="text/javascript">
+
+        $(function() {
+            $("input:file").change(function (){
+                //need to make it so it strips first 12 characters before saving as filename in javascript...
+                var fileName = $(this).val();
+                $(".filename").val(fileName.substring(12));
+                $(".filename").show();
+                $(".img_string").show();
+
+
+            });
+        });
+
+
+        $(document).ready(function(){
+            $(".filename").hide();
+            $(".img_string").hide();
+
+
+        });
+    </script>
 
 @endsection
