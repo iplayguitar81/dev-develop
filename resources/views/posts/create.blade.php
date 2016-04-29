@@ -26,6 +26,12 @@
                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('title', '<p class="help-block">:message</p>') !!}
                 </div>
+
+                    <div class="col-sm-6">
+                        {!! Form::text('img_string', null, ['class' => 'form-control']) !!}
+                        {!! $errors->first('img_string', '<p class="help-block">:message</p>') !!}
+                    </div>
+
             </div>
             <div class="form-group {{ $errors->has('body') ? 'has-error' : ''}}">
                 {!! Form::label('body', 'Body: ', ['class' => 'col-sm-3 control-label']) !!}
