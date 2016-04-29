@@ -12,7 +12,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ $post->id }}</td> <td> {{ $post->title }} </td><td> {{ $post->body }} </td>
+                    <td>{{ $post->id }}</td> <td> {{ $post->title }} </td><td> {{ $post->body }} </td><td><img class="img-thumbnail" src="../images/{{$post->img_string}}"></td>
                 </tr>
             </tbody>    
         </table>
