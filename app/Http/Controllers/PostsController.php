@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Gate;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 use App\Post;
 use Illuminate\Http\Request;
@@ -12,6 +14,9 @@ use Carbon\Carbon;
 use Session;
 use Validator;
 use Flash;
+
+//this is the right namespace for image uploading...
+use Illuminate\Support\Facades\Input;
 
 
 use Redirect;
@@ -65,6 +70,17 @@ $this->validate($request,[
     'body' => 'required',
 
 ]);
+
+        if(Input::hasFile('file')){
+
+            echo 'Uploaded<br/>';
+            $file = Input::file('file');
+            $file->move('images', $file->getClientOriginalName());
+            echo'<img src"images/'.$file->getClientOriginalName() .'"/>';
+
+
+        }
+
 
 
         Post::create($request->all());
