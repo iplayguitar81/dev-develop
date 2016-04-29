@@ -21,7 +21,7 @@
                 <tr>
                     <td>{{ $x }}</td>
                     <td><a href="{{ url('posts', $item->id) }}">{{ $item->title }}</a></td><td>{{ $item->body }}</td>
-
+{{--<img src="{{route('image',['filename'=>])}}">--}}
                     @can('isAdmin')
                     <td>
                         <a href="{{ url('posts/' . $item->id . '/edit') }}">
