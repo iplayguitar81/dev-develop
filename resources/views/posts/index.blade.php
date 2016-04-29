@@ -23,7 +23,10 @@
                     <td><a href="{{ url('posts', $item->id) }}">{{ $item->title }}</a></td><td>{{ $item->body }}</td>
                     @if($item->img_string != "")
                     <td><img class="img-thumbnail" src="../images/{{$item->img_string}}"></td>
-                        @endif
+                    @else
+                        <td>&nbsp;&nbsp;</td>
+
+                    @endif
                         {{--<img src="{{route('image',['filename'=>])}}">--}}
                     @can('isAdmin')
                     <td>
