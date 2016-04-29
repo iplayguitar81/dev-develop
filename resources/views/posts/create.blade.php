@@ -46,7 +46,7 @@
 
         <div class="col-sm-offset-3 col-sm-3">
 
-            {!! Form::label('img_string', 'Image String: ', ['class' => 'col-sm-3 control-label']) !!}
+            {!! Form::label('img_string', 'Image String: ', ['class' => 'col-sm-3 control-label img_string']) !!}
 
                 {!! Form::text('img_string', null, ['class' => 'form-control filename']) !!}
                 {!! $errors->first('img_string', '<p class="help-block">:message</p>') !!}
@@ -82,6 +82,8 @@
                 //need to make it so it strips first 12 characters before saving as filename in javascript...
                 var fileName = $(this).val();
                 $(".filename").val(fileName.substring(12));
+                $(".filename").show();
+                $(".img_string").show();
 
 
             });
@@ -90,6 +92,8 @@
 
         $(document).ready(function(){
         $(".filename").hide();
+        $(".img_string").hide();
+
 
         });
     </script>
