@@ -26,7 +26,7 @@
                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('title', '<p class="help-block">:message</p>') !!}
                 </div>
-
+                    {!! Form::label('img_string', 'Image String: ', ['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-6">
                         {!! Form::text('img_string', null, ['class' => 'form-control']) !!}
                         {!! $errors->first('img_string', '<p class="help-block">:message</p>') !!}
