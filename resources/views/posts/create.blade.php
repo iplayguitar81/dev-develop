@@ -26,12 +26,11 @@
                     {!! Form::text('title', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('title', '<p class="help-block">:message</p>') !!}
                 </div>
-                    {!! Form::label('img_string', 'Image String: ', ['class' => 'col-sm-3 control-label']) !!}
+                    {!! Form::label('img_string', 'Image String: ', ['class' => 'col-sm-3 control-label filename']) !!}
                     <div class="col-sm-6">
                         {!! Form::text('img_string', null, ['class' => 'form-control']) !!}
                         {!! $errors->first('img_string', '<p class="help-block">:message</p>') !!}
                     </div>
-
             </div>
             <div class="form-group {{ $errors->has('body') ? 'has-error' : ''}}">
                 {!! Form::label('body', 'Body: ', ['class' => 'col-sm-3 control-label']) !!}
@@ -64,3 +63,16 @@
 
 
 @endsection
+
+@section('footer')
+
+    <script type="text/javascript">
+        $(function() {
+            $("input:file").change(function (){
+                var fileName = $(this).val();
+                $(".filename").html(fileName);
+            });
+        });
+    </script>
+
+    @endsection
