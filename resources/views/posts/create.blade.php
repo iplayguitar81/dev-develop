@@ -65,7 +65,7 @@
 @endsection
 
 @section('footer')
-
+    <script  src="{{URL::to(asset('/js/jquery.js'))}}"></script>
     <script type="text/javascript">
         $(function() {
             $("input:file").change(function (){
