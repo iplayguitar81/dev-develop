@@ -7,7 +7,7 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>ID.</th> <th>Title</th><th>Body</th>
+                    <th>ID.</th> <th>Title</th><th>Body</th><th>Img</th>
                 </tr>
             </thead>
             <tbody>
