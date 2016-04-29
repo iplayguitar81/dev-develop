@@ -20,7 +20,7 @@
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
-                    <td><a href="{{ url('posts', $item->id) }}">{{ $item->title }}</a></td><td>{{ $item->body }}</td><td><img src="../images/{{$item->img_string}}"></td>
+                    <td><a href="{{ url('posts', $item->id) }}">{{ $item->title }}</a></td><td>{{ $item->body }}</td><td><img class="img-thumbnail" src="../images/{{$item->img_string}}"></td>
 {{--<img src="{{route('image',['filename'=>])}}">--}}
                     @can('isAdmin')
                     <td>
