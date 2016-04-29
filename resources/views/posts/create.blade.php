@@ -70,7 +70,7 @@
         $(function() {
             $("input:file").change(function (){
                 var fileName = $(this).val();
-                $(".filename").textContent(fileName);
+                $(".filename").Text(fileName);
             });
         });
     </script>
