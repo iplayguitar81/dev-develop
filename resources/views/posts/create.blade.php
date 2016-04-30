@@ -37,7 +37,7 @@
             </div>
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-3">
-        <input type="file" name="file" id="file" />
+        <input type="file" name="file" id="file" onchange="readURL(this);"/>
             </div>
         </div>
         {{csrf_field()}}
@@ -50,6 +50,9 @@
 
                 {!! Form::text('img_string', null, ['class' => 'form-control filename']) !!}
                 {!! $errors->first('img_string', '<p class="help-block">:message</p>') !!}
+<div id="blah2">
+    <img id="blah" src="#" alt="uploaded image">
+</div>
 
         </div>
 
@@ -84,6 +87,7 @@
                 $(".filename").val(fileName.substring(12));
                 $(".filename").show();
                 $(".img_string").show();
+                $("#blah2").show();
 
 
             });
@@ -93,9 +97,27 @@
         $(document).ready(function(){
         $(".filename").hide();
         $(".img_string").hide();
+        $("#blah2").hide();
+
 
 
         });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                            .attr('src', e.target.result)
+                            .width(150)
+                            .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
     </script>
 
     @endsection
