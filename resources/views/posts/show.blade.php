@@ -25,4 +25,8 @@
         </table>
     </div>
 
+    <a href="{{ url('posts') }}">
+        <button type="submit" class="btn btn-primary btn-xs">Back to All Posts</button>
+    </a>
+
 @endsection
