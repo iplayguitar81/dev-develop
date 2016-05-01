@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -9,6 +10,13 @@
 
                 <div class="panel-body">
                     Your Application's Landing Page. Poop
+
+                    @foreach($posts as $item){
+
+                    {{ $item->title }}
+
+                    }
+
                 </div>
             </div>
         </div>
