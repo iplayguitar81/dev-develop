@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 //
 //use App\Http\Requests;
 use App\Post;
+use App\Card;
 
 class PagesController extends Controller
 
@@ -19,7 +20,9 @@ class PagesController extends Controller
 
         $posts = Post::paginate(15);
 
-    return view('welcome', compact('posts'));
+        $cards=Card::paginate(15);
+
+    return view('welcome', compact('posts','cards'));
 
     }
 
