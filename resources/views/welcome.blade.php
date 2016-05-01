@@ -12,11 +12,11 @@
                     Your Application's Landing Page. Poop
 
                     @foreach($posts as $item)
-
                     <p>{{ $item->title }}</p>
+                    <p>{{ $item->body }}</p>
 
 
-                        @endforeach
+                    @endforeach
 
                 </div>
             </div>
