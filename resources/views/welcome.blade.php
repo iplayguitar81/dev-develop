@@ -11,7 +11,7 @@
                 <div class="panel-body">
                     Your Application's Landing Page. Poop
 
-                    @foreach($posts as $item){
+                    @foreach($post as $item){
 
                     {{ $item->title }}
 
