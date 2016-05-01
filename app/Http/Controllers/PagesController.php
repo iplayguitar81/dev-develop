@@ -5,15 +5,21 @@ namespace App\Http\Controllers;
 //use Illuminate\Http\Request;
 //
 //use App\Http\Requests;
+use Post;
 
 class PagesController extends Controller
+
 {
     //
 
     public function home() {
 
-        return View::make('welcome')
-            ->with('index_slider', Posts::all());
+
+            $people= ['Taylor', 'Matt','Jeffrey'];
+
+        $posts = Post::paginate(15);
+
+    return view('welcome', compact('people'));
 
     }
 
