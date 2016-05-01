@@ -13,7 +13,7 @@
 
                     @foreach($posts as $item){
 
-                    {{ $item->title }}
+                    <p>{{ $item->title }}</p>
 
                     }
                         @endforeach
