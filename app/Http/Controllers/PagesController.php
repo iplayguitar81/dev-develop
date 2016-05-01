@@ -12,13 +12,8 @@ class PagesController extends Controller
 
     public function home() {
 
-        $data = array(
-            'home_posts'  => \CreatePostsTable::all(),
-            'home_cards' => \CreateCardsTable::all(),
-
-        );
-
-        return View::make('index', $data);
+        return View::make('welcome')
+            ->with('index_slider', Posts::all());
 
     }
 
