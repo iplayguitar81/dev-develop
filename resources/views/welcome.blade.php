@@ -14,7 +14,7 @@
                     @foreach($posts as $item)
                     <p>{{ $item->title }}</p>
                     <p>{{ $item->body }}</p>
-
+                        <img class="img-thumbnail" src="../images/{{$item->img_string}}">
 
                     @endforeach
 
