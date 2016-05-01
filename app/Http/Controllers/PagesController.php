@@ -19,7 +19,7 @@ class PagesController extends Controller
 
         $posts = Post::paginate(15);
 
-    return view('welcome', compact($posts));
+    return view('welcome', compact('posts'));
 
     }
 
