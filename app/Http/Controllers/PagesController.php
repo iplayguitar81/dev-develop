@@ -13,8 +13,8 @@ class PagesController extends Controller
     public function home() {
 
         $data = array(
-            'home_posts'  => PostsController::all(),
-            'home_cards' => CardsController::all(),
+            'home_posts'  => \CreatePostsTable::all(),
+            'home_cards' => \CreateCardsTable::all(),
 
         );
 
