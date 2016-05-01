@@ -18,6 +18,12 @@
 
                     @endforeach
 
+                    <p>START CARDS DB CALL:</p>
+                    @foreach($cards as $item)
+                        <p>{{ $item->title }}</p>
+
+                        @endforeach
+
                 </div>
             </div>
         </div>
